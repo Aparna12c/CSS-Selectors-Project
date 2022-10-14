@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSS Selectors - before & after</title>
+
+<style>
+
+	.navbar
+	{
+		        display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+	
+	.navbar ul li
+	{
+		display: inline-block;
+    list-style-type: none;
+    padding-right: 12px;
+    font-family: Helvetica;
+    font-size: 21px;
+    text-transform: capitalize;
+    position: relative;
+
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after
+
+{
+	content: "";
+    border: 1px solid red;
+    position: absolute;
+    bottom: -26%;
+    left: 3%;
+    width: 75%;
+
+}
+
+
+		.navbar ul li a
+		{
+			color: black;
+			text-decoration: none;
+
+		}
+
+</style>
+
+<body>
+
+	<nav class="navbar">
+		<ul>
+			<li><a href="#"  class="active">home</a></li>
+			<li><a href="#">services</a></li>
+
+			<li><a href="#">about</a></li>
+
+			<li><a href="#">gallery</a></li>
+
+			<li><a href="#">contact</a></li>
+
+	</nav>
+
+</body>
+</html>
